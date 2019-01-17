@@ -37,7 +37,7 @@ def spacenet(predictions, ground_truth):
         else:
             (minx, miny, maxx, maxy) = p.bounds
             stretch = max(maxx - minx, maxy - miny)
-            return p.buffer(stretch * 1.05)
+            return p.buffer(stretch * 0.01)
 
     def iou(a, b):
         a = make_valid(a)
